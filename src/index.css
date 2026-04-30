@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Lexend+Exa:wght@200;300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lexend Exa", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-nova-black: #050505;
+  --color-nova-obsidian: #0A0A0A;
+  --color-nova-electric: #007AFF;
+  --color-nova-purple: #BF5AF2;
+  --color-nova-white: #FFFFFF;
+  --color-nova-gray: #1C1C1E;
+}
+
+@layer base {
+  body {
+    @apply bg-nova-black text-nova-white antialiased selection:bg-nova-electric selection:text-white;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/[0.03] border border-white/10 backdrop-blur-2xl;
+  }
+  
+  .glow-electric {
+    box-shadow: 0 0 30px rgba(0, 122, 255, 0.2);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 30px rgba(191, 90, 242, 0.2);
+  }
+  
+  .text-glow-electric {
+    text-shadow: 0 0 15px rgba(0, 122, 255, 0.5);
+  }
+
+  .font-display {
+    font-family: "Syne", sans-serif;
+  }
+}
